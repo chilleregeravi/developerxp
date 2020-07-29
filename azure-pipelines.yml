@@ -1,7 +1,7 @@
-# Created by : Megha Kadur
-# Email ID: megha.kadur@kone.com
+# Created by : chilleregeravi
+# Email ID: chilleregeravi@gmail.com
 # Ant
-# Build your Java projects and run tests with Apache Ant.
+# Build your NPM Project
 # Add steps that save build artifacts and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 # trigger:
@@ -13,7 +13,6 @@ resources:
       type: github
       endpoint: chilleregeravi
       name:  chilleregeravi/developerxp
-   #   ref: $(Build.SourceBranchName)
       
 pr:
   branches:
@@ -22,8 +21,7 @@ pr:
 
   
 pool:
-  vmImage: 'vs2017-win2016'
-  timeoutInMinutes: 400
+  name: 'Mine'
   
 steps:
   - checkout: self
