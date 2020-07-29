@@ -1,0 +1,39 @@
+# Created by : Megha Kadur
+# Email ID: megha.kadur@kone.com
+# Ant
+# Build your Java projects and run tests with Apache Ant.
+# Add steps that save build artifacts and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+# trigger:
+  # - '*'
+
+resources:
+  repositories:
+    - repository: developerexp
+      type: github
+      endpoint: chilleregeravi
+      name:  chilleregeravi/developerxp
+   #   ref: $(Build.SourceBranchName)
+      
+pr:
+  branches:
+     include:
+       - master
+
+  
+pool:
+  vmImage: 'vs2017-win2016'
+  timeoutInMinutes: 400
+  
+steps:
+  - checkout: self
+    fetchDepth: 1
+  
+  - task: Npm@1
+    displayName: 'NPM BUILD'
+    inputs:
+      command: install
+      workingDir: developerxp-app
+  
+   
+  
