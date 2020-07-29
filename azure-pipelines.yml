@@ -11,7 +11,7 @@ resources:
   repositories:
     - repository: developerexp
       type: github
-      endpoint: chilleregeravi
+      endpoint: chilleregeravi (1)
       name:  chilleregeravi/developerxp
    #   ref: $(Build.SourceBranchName)
       
