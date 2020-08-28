@@ -9,9 +9,9 @@
 trigger:
   branches:
     include:
-      - testnewbranch
-    exclude:
       - master
+    exclude:
+      - testnewbranch
 
 resources:
   repositories:
