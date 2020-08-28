@@ -15,10 +15,10 @@ resources:
       trigger:
         branches:
           include:
-            - master
+            - staging
           exclude:
             - testnewbranch
-      
+                  
     - repository: scrum
       type: git
       name: ScrumProcess/ScrumProcess  
