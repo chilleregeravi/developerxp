@@ -12,12 +12,12 @@ trigger:
       - staging
     exclude:
       - master
-        
+
 resources:
   repositories:
     - repository: developerexp
       type: github
-      endpoint: chilleregeravi (1)
+      endpoint: chilleregeravi
       name:  chilleregeravi/developerxp
       
 pr:
