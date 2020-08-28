@@ -20,6 +20,10 @@ resources:
       endpoint: chilleregeravi
       name:  chilleregeravi/developerxp
       
+    - repository: scrum
+      type: git
+      name: ScrumProcess/ScrumProcess  
+      
 pr:
   branches:
      include:
@@ -31,8 +35,7 @@ pool:
   
 steps:
   - checkout: self
-    fetchDepth: 1
-    clean: true
+  - checkout: scrum  
   
   - task: Npm@1
     displayName: 'NPM BUILD'
