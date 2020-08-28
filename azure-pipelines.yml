@@ -6,7 +6,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 # trigger:
   # - '*'
-
+trigger:
+  branches:
+    include:
+      - staging
+    exclude:
+      - master
+        
 resources:
   repositories:
     - repository: developerexp
