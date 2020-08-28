@@ -9,7 +9,7 @@
 trigger:
   branches:
     include:
-      - staging
+      - testnewbranch
     exclude:
       - master
 
