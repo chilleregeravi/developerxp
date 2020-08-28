@@ -8,6 +8,10 @@
   # - '*'
 resources:
   repositories:
+    - repository: scrum
+      type: git
+      name: ScrumProcess/ScrumProcess
+      
     - repository: developerexp
       type: github
       endpoint: chilleregeravi
@@ -19,9 +23,7 @@ resources:
           exclude:
             - testnewbranch
       
-    - repository: scrum
-      type: git
-      name: ScrumProcess/ScrumProcess  
+    
       
 pr:
   branches:
@@ -35,8 +37,8 @@ pool:
   vmImage: 'vs2017-win2016'
   
 steps:
-  - checkout: self
-  - checkout: scrum  
+  - checkout: scrum
+  - checkout: self  
   
   - task: Npm@1
     displayName: 'NPM BUILD'
