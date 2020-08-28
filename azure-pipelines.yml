@@ -6,19 +6,18 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 # trigger:
   # - '*'
-trigger:
-  branches:
-    include:
-      - master
-    exclude:
-      - testnewbranch
-
 resources:
   repositories:
     - repository: developerexp
       type: github
       endpoint: chilleregeravi
       name:  chilleregeravi/developerxp
+      trigger:
+        branches:
+          include:
+            - master
+          exclude:
+            - testnewbranch
       
     - repository: scrum
       type: git
