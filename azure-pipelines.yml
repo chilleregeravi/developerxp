@@ -27,6 +27,8 @@ pr:
   branches:
      include:
        - master
+     exclude:
+       - staging  
 
   
 pool:
